@@ -1,0 +1,208 @@
+body {
+	background: linear-gradient(to bottom right, #232526, #414345);
+	font-family: sans-serif;
+}
+
+.form-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 420px;
+	padding: 40px 40px;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+	            0 0px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2 {
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.form-box .user-box {
+	position: relative;
+}
+
+.form-box .user-box input {
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+
+.form-box .user-box label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: 0.5s;
+}
+
+.form-box .user-box input:focus ~ label,
+.form-box .user-box input:valid ~ label {
+	top: -20px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px;
+}
+
+.form-box input[type="submit"] {
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-bottom: 7px;
+	position: relative;
+	z-index: 0;
+	transition: all 0.5s;
+}
+
+.form-box input[type="submit"]:hover {
+	background-color: #fff;
+	color: #03a9f4;
+}
+
+.form-box input[type="submit"]:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background: #03a9f4;
+	z-index: -1;
+	transition: all 0.5s;
+}
+
+.form-box input[type="submit"]:hover:before {
+	width: 100%;
+}
+
+.form-box .submit-button {
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+    /* padding-bottom: 0px; */
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: 0.5s;
+	margin-top: 30px;
+    margin-left: 70px;
+	letter-spacing: 4px;
+}
+
+.form-box .submit-button:hover {
+	background: #03a9f4;
+	box-shadow: 0 0 10px #03a9f4,
+	            0 0 40px #03a9f4,
+	            0 0 80px #03a9f4;
+}
+
+.form-box .submit-button span {
+	position: absolute;
+	display: block;
+}
+
+.form-box .submit-button span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #03a9f4);
+	animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+	0% {
+		left: -100%;
+	}
+	50%, 100% {
+		left: 100%;
+	}
+}
+
+.form-box .submit-button span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #03a9f4);
+	animation: animate2 1s linear infinite;
+	animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+	0% {
+		top: -100%;
+	}
+	50%, 100% {
+		top: 100%;
+	}
+}
+
+.form-box .submit-button span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #03a9f4);
+	animation: animate3 1s linear infinite;
+	animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+	0% {
+		right: -100%;
+	}
+	50%, 100% {
+		right: 100%;
+	}
+}
+
+.form-box .submit-button span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #03a9f4);
+	animation: animate4 1s linear infinite;
+	animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+	0% {
+		bottom: -100%;
+	}
+	50%, 100% {
+		bottom: 100%;
+	}
+}
+
+.already-account{
+    color:#fff;
+    text-decoration: none;
+}
+.already-account:hover{
+    color: #03a9f4;
+}
