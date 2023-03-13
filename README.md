@@ -1,2 +1,2 @@
 # Login-SignUp-Form
-Web template fo Login and Signup form
+Web template for Login and Signup form
